@@ -1,8 +1,40 @@
 <!DOCTYPE html>
   <head>
+    <link rel="stylesheet" href="diceroller.css">
     <title>Dice Roller</title>
+    <style>
+      body {
+        background-color: black;
+        color: yellow;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #diceContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+      button {
+        background-color: yellow;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      #modifier {
+        width: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #result {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+    </style>
   </head>
-  <link rel="stylesheet" href="diceroller.css">
   <body>
     <h1>Dice Roller</h1>
     <div id="diceContainer">
@@ -11,6 +43,10 @@
       <button id="d8">Roll a D8</button>
       <button id="d10">Roll a D10</button>
       <button id="d20">Roll a D20</button>
+      <div>
+        Modifier:
+        <input type="number" id="modifier" value="0">
+      </div>
       <div id="result"></div>
     </div>
   </body>
